@@ -20,8 +20,8 @@
     CGContextRef c = UIGraphicsGetCurrentContext();
     CGContextSetFillColorWithColor(c, [[UIColor colorWithWhite:0.0 alpha:0.1] CGColor]);
     CGContextFillRoundedRect(c, self.bounds, 7);
-    
-    
+
+
     CGFloat y = 0;
     for(NSString *title in self.titles) {
         UIColor *color = [self.colors objectForKey:title];
@@ -34,8 +34,8 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
         [title drawAtPoint:CGPointMake(COLORPADDING + PADDING, y + PADDING + 1) withFont:self.titlesFont];
-        [[UIColor blackColor] set];
-        [title drawAtPoint:CGPointMake(COLORPADDING + PADDING, y + PADDING) withFont:self.titlesFont];
+        //[[UIColor blackColor] set];
+        //[title drawAtPoint:CGPointMake(COLORPADDING + PADDING, y + PADDING) withFont:self.titlesFont];
 #pragma clang diagnostic pop
         y += [self.titlesFont lineHeight];
     }
@@ -43,7 +43,8 @@
 
 - (UIFont *)titlesFont {
     if(_titlesFont == nil)
-        _titlesFont = [UIFont boldSystemFontOfSize:10];
+        //_titlesFont = [UIFont boldSystemFontOfSize:10];
+        _titlesFont = [UIFont systemFontOfSize:9];
     return _titlesFont;
 }
 

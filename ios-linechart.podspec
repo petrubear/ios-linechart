@@ -9,8 +9,8 @@ Pod::Spec.new do |s|
 
   s.author       = { "Marcel Ruegenberg" => "github@dustlab.com" }
 
-  s.source       = { :git => "https://github.com/mruegenberg/ios-linechart.git", :tag => "1.2.0" }
-
+  #s.source       = { :git => "https://github.com/mruegenberg/ios-linechart.git", :tag => "1.2.0" }
+  s.source       = { :git => "https://github.com/petrubear/ios-linechart.git", :tag => "1.2.0" }
   s.platform     = :ios, '5.0'
 
   s.source_files = 'ios-linechart/LCLegendView.{h,m}', 'ios-linechart/LCLineChartView.{h,m}', 'ios-linechart/LCInfoView.{h,m}', 'ios-linechart/LineChart.h'
@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.dependency 'objc-utils', '~> 0.3.3'
+  s.dependency 'objc-utils', '~> 0.4.5'
 end
